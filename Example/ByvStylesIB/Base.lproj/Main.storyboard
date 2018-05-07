@@ -1,29 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LEs-cH-laa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="705-vg-KMd">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ByvStylesIB_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LEs-cH-laa" customClass="ViewController" customModule="ByvStyles_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="36b-d1-Tpc"/>
+                        <viewControllerLayoutGuide type="bottom" id="URH-Cp-eY9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="cNn-mM-K2v" customClass="StyledUIView" customModule="ByvStylesIB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-c3-eTX" customClass="StyledUILabel" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="20" width="153.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledText" value="&lt;titleBoldWhite&gt;Añade tu vehículo&lt;/titleBoldWhite&gt;"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label 2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvv-BT-t3I" customClass="StyledUILabel" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="49.5" width="325" height="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledText">
+                                        <string key="value">&lt;subtitleMessages&gt;Hay una reparación asociada a este mantenimiento pendiente de valorar.&lt;/subtitleMessages&gt; &lt;subtitleMessagesBold&gt;Obtendrás un 2% de descuento&lt;/subtitleMessagesBold&gt; &lt;subtitleMessages&gt;de la factura en € bigs.&lt;/subtitleMessages&gt;</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-To-cVK" customClass="StyledUIView" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="107" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lo5-ni-zX8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shadowColor" value="inputLabels"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="primaryDark"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="37"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="primary"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtT-Oc-bHv" customClass="StyledUIButton" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="223" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HUN-j9-kwE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledTitle">
+                                        <string key="value">&lt;titleBoldWhite&gt;Añade&lt;/titleBoldWhite&gt; &lt;subtitleMessagesBold&gt;tu&lt;/subtitleMessagesBold&gt; &lt;titleBoldWhite&gt;vehículo&lt;/titleBoldWhite&gt;</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99731611389999997" green="0.35520301869999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JtT-Oc-bHv" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="2kk-jm-O5P"/>
+                            <constraint firstItem="GMf-c3-eTX" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="7oD-k6-u67"/>
+                            <constraint firstItem="Tvv-BT-t3I" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="Awk-zi-gFp"/>
+                            <constraint firstItem="Tvv-BT-t3I" firstAttribute="top" secondItem="GMf-c3-eTX" secondAttribute="bottom" constant="8" id="DbW-Zq-NwL"/>
+                            <constraint firstItem="GMf-c3-eTX" firstAttribute="top" secondItem="36b-d1-Tpc" secondAttribute="bottom" id="HRl-hB-GnA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMf-c3-eTX" secondAttribute="trailing" constant="16" id="SNQ-iQ-YJx"/>
+                            <constraint firstItem="JtT-Oc-bHv" firstAttribute="top" secondItem="ON8-To-cVK" secondAttribute="bottom" constant="16" id="UQW-JR-Huo"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tvv-BT-t3I" secondAttribute="trailing" constant="16" id="Z2K-Nz-6hM"/>
+                            <constraint firstAttribute="trailing" secondItem="ON8-To-cVK" secondAttribute="trailing" constant="16" id="brB-Ez-dIK"/>
+                            <constraint firstItem="ON8-To-cVK" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="hU1-Zy-lJ3"/>
+                            <constraint firstItem="ON8-To-cVK" firstAttribute="top" secondItem="Tvv-BT-t3I" secondAttribute="bottom" constant="8" id="urg-lA-mpA"/>
+                            <constraint firstAttribute="trailing" secondItem="JtT-Oc-bHv" secondAttribute="trailing" constant="16" id="z3w-jH-v9l"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="yellowText"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="GMf-c3-eTX" id="2KQ-uV-Kmp"/>
+                        <outlet property="label2" destination="Tvv-BT-t3I" id="PSW-3S-ldS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIk-BH-Sf1" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

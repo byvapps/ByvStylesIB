@@ -70,8 +70,18 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="styledTitle">
                                         <string key="value">&lt;titleBoldWhite&gt;Añade&lt;/titleBoldWhite&gt; &lt;subtitleMessagesBold&gt;tu&lt;/subtitleMessagesBold&gt; &lt;titleBoldWhite&gt;vehículo&lt;/titleBoldWhite&gt;</string>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="34"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-2d-tvn">
+                                <rect key="frame" x="186" y="429" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99731611389999997" green="0.35520301869999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

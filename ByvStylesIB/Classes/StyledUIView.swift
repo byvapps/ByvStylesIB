@@ -9,9 +9,9 @@ import UIKit
 import ByvStyles
 
 @IBDesignable
-class StyledUIView: UIView {
+public class StyledUIView: UIView {
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
         if let bgColor = bgColor {
@@ -23,6 +23,14 @@ class StyledUIView: UIView {
         didSet {
             if let bgColor = bgColor {
                 self.bgNamedColor(bgColor)
+            }
+        }
+    }
+    
+    @IBInspectable var tintNamedColor: String? {
+        didSet {
+            if let tintNamedColor = tintNamedColor {
+                self.tintNamedColor(tintNamedColor)
             }
         }
     }

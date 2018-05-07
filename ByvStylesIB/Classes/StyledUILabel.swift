@@ -9,9 +9,9 @@ import UIKit
 import ByvStyles
 
 @IBDesignable
-class StyledUILabel: UILabel {
+public class StyledUILabel: UILabel {
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
         if let styledText = styledText {

@@ -48,7 +48,6 @@
                                     <constraint firstAttribute="height" constant="100" id="lo5-ni-zX8"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="shadowColor" value="inputLabels"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="primaryDark"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="37"/>

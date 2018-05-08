@@ -44,6 +44,14 @@ public class StyledTextField: UITextField {
         }
     }
     
+    @IBInspectable var textColorName: String? {
+        didSet {
+            if let textColorName = textColorName {
+                self.textColor = ByvColors.named(textColorName)
+            }
+        }
+    }
+    
     @IBInspectable public var sidePadding: CGFloat = 0 {
         didSet {
             let padding = UIView(frame: CGRect(x: 0, y: 0, width: sidePadding, height: sidePadding))

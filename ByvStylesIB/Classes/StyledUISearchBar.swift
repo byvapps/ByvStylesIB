@@ -9,7 +9,7 @@ import Foundation
 import ByvStyles
 
 @IBDesignable
-public class StyledSearchBar: UISearchBar {
+public class StyledUISearchBar: UISearchBar {
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()

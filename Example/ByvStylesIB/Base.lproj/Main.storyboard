@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-c3-eTX" customClass="StyledUILabel" customModule="ByvStylesIB">
-                                <rect key="frame" x="16" y="20" width="153.5" height="21.5"/>
+                                <rect key="frame" x="16" y="86" width="153.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label 2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvv-BT-t3I" customClass="StyledUILabel" customModule="ByvStylesIB">
-                                <rect key="frame" x="16" y="49.5" width="325" height="50"/>
+                                <rect key="frame" x="16" y="115.5" width="325" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-To-cVK" customClass="StyledUIView" customModule="ByvStylesIB">
-                                <rect key="frame" x="16" y="107" width="343" height="100"/>
+                                <rect key="frame" x="16" y="173" width="343" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="lo5-ni-zX8"/>
@@ -60,7 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtT-Oc-bHv" customClass="StyledUIButton" customModule="ByvStylesIB">
-                                <rect key="frame" x="16" y="223" width="343" height="100"/>
+                                <rect key="frame" x="16" y="289" width="343" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="HUN-j9-kwE"/>
@@ -73,28 +73,72 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="34"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="primary"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-2d-tvn">
-                                <rect key="frame" x="186" y="429" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHF-C5-Xqv" customClass="StyledTextField" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="396.5" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="primary"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledPlaceholder">
+                                        <string key="value">&lt;titleBoldWhite&gt;Añade&lt;/titleBoldWhite&gt; &lt;subtitleMessagesBold&gt;tu&lt;/subtitleMessagesBold&gt; &lt;titleBoldWhite&gt;vehículo&lt;/titleBoldWhite&gt;</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="drQ-4K-sNO" customClass="StyledSearchBar" customModule="ByvStylesIB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="primary"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="primary"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledPlaceholder">
+                                        <string key="value">&lt;titleBoldWhite&gt;Añade&lt;/titleBoldWhite&gt; &lt;subtitleMessagesBold&gt;tu&lt;/subtitleMessagesBold&gt; &lt;titleBoldWhite&gt;vehículo&lt;/titleBoldWhite&gt;</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-l5-bDo" customClass="StyledTextView" customModule="ByvStylesIB">
+                                <rect key="frame" x="16" y="434" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ug9-BW-B1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styledText">
+                                        <string key="value">&lt;subtitleMessages&gt;Hay una reparación asociada a este mantenimiento pendiente de valorar.&lt;/subtitleMessages&gt; &lt;subtitleMessagesBold&gt;Obtendrás un 2% de descuento&lt;/subtitleMessagesBold&gt; &lt;subtitleMessages&gt;de la factura en € bigs.&lt;/subtitleMessages&gt;</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="primary"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.99731611389999997" green="0.35520301869999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JtT-Oc-bHv" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="2kk-jm-O5P"/>
+                            <constraint firstItem="drQ-4K-sNO" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" id="6Bh-kU-LhK"/>
+                            <constraint firstAttribute="trailing" secondItem="EXz-l5-bDo" secondAttribute="trailing" constant="16" id="7OB-m8-cTV"/>
                             <constraint firstItem="GMf-c3-eTX" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="7oD-k6-u67"/>
                             <constraint firstItem="Tvv-BT-t3I" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="Awk-zi-gFp"/>
                             <constraint firstItem="Tvv-BT-t3I" firstAttribute="top" secondItem="GMf-c3-eTX" secondAttribute="bottom" constant="8" id="DbW-Zq-NwL"/>
-                            <constraint firstItem="GMf-c3-eTX" firstAttribute="top" secondItem="36b-d1-Tpc" secondAttribute="bottom" id="HRl-hB-GnA"/>
+                            <constraint firstItem="CHF-C5-Xqv" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="KFg-Qy-dbG"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMf-c3-eTX" secondAttribute="trailing" constant="16" id="SNQ-iQ-YJx"/>
+                            <constraint firstItem="drQ-4K-sNO" firstAttribute="top" secondItem="36b-d1-Tpc" secondAttribute="bottom" id="TLb-LC-1Qd"/>
+                            <constraint firstItem="EXz-l5-bDo" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="TR9-EU-gCb"/>
                             <constraint firstItem="JtT-Oc-bHv" firstAttribute="top" secondItem="ON8-To-cVK" secondAttribute="bottom" constant="16" id="UQW-JR-Huo"/>
+                            <constraint firstItem="CHF-C5-Xqv" firstAttribute="top" secondItem="JtT-Oc-bHv" secondAttribute="bottom" constant="8" id="VIz-Zo-QQU"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tvv-BT-t3I" secondAttribute="trailing" constant="16" id="Z2K-Nz-6hM"/>
+                            <constraint firstAttribute="trailing" secondItem="drQ-4K-sNO" secondAttribute="trailing" id="bhc-aA-zbb"/>
                             <constraint firstAttribute="trailing" secondItem="ON8-To-cVK" secondAttribute="trailing" constant="16" id="brB-Ez-dIK"/>
+                            <constraint firstItem="GMf-c3-eTX" firstAttribute="top" secondItem="drQ-4K-sNO" secondAttribute="bottom" constant="10" id="h7O-oW-9FA"/>
+                            <constraint firstItem="EXz-l5-bDo" firstAttribute="top" secondItem="CHF-C5-Xqv" secondAttribute="bottom" constant="8" id="hSo-Lb-E4G"/>
                             <constraint firstItem="ON8-To-cVK" firstAttribute="leading" secondItem="cNn-mM-K2v" secondAttribute="leading" constant="16" id="hU1-Zy-lJ3"/>
+                            <constraint firstAttribute="trailing" secondItem="CHF-C5-Xqv" secondAttribute="trailing" constant="16" id="uJt-20-7Vv"/>
                             <constraint firstItem="ON8-To-cVK" firstAttribute="top" secondItem="Tvv-BT-t3I" secondAttribute="bottom" constant="8" id="urg-lA-mpA"/>
                             <constraint firstAttribute="trailing" secondItem="JtT-Oc-bHv" secondAttribute="trailing" constant="16" id="z3w-jH-v9l"/>
                         </constraints>

@@ -15,22 +15,22 @@ public class StyledUIView: UIView {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
         if let bgColor = bgColor {
-            self.bgNamedColor(bgColor)
+            self.bgColorName(bgColor)
         }
     }
 
     @IBInspectable var bgColor: String? {
         didSet {
             if let bgColor = bgColor {
-                self.bgNamedColor(bgColor)
+                self.bgColorName(bgColor)
             }
         }
     }
     
-    @IBInspectable var tintNamedColor: String? {
+    @IBInspectable var tintName: String? {
         didSet {
-            if let tintNamedColor = tintNamedColor {
-                self.tintNamedColor(tintNamedColor)
+            if let tintName = tintName {
+                self.tintName(tintName)
             }
         }
     }
@@ -57,7 +57,7 @@ public class StyledUIView: UIView {
         }
     }
     
-    @IBInspectable public var shadowColor: String? {
+    @IBInspectable public var shadowColorName: String? {
         didSet {
             if let colorStr = borderColor, let color = ByvColors.named(colorStr) {
                 layer.shadowColor = color.cgColor

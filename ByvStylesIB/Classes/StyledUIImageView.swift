@@ -30,14 +30,22 @@ public class StyledUIImageView: UIImageView {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
         if let bgColor = bgColor {
-            self.bgNamedColor(bgColor)
+            self.bgColorName(bgColor)
         }
     }
     
     @IBInspectable var bgColor: String? {
         didSet {
             if let bgColor = bgColor {
-                self.bgNamedColor(bgColor)
+                self.bgColorName(bgColor)
+            }
+        }
+    }
+    
+    @IBInspectable var tintName: String? {
+        didSet {
+            if let tintName = tintName {
+                self.tintName(tintName)
             }
         }
     }

@@ -1,28 +1,29 @@
 //
-//  ByvStUILabel.swift
-//  ByvStyles
+//  StyledUISearchBarView.swift
+//  ByvStylesIB
 //
-//  Created by Adrian Apodaca on 4/5/18.
+//  Created by Adrian Apodaca on 8/5/18.
 //
 
-import UIKit
+import Foundation
 import ByvStyles
 
 @IBDesignable
-public class StyledUILabel: UILabel {
-    
+public class StyledSearchBar: UISearchBar {
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
-        if let styledText = styledText {
-            self.styledText(styledText)
+        if let styledPlaceholder = styledPlaceholder, let searchField = self.searchField {
+            searchField.styledPlaceholder(styledPlaceholder)
+            self.layoutSubviews()
         }
     }
-
-    @IBInspectable var styledText: String? {
+    
+    @IBInspectable var styledPlaceholder: String? {
         didSet {
-            if let styledText = styledText {
-                self.styledText(styledText)
+            if let styledPlaceholder = styledPlaceholder, let searchField = self.searchField {
+                searchField.styledPlaceholder(styledPlaceholder)
+                self.layoutSubviews()
             }
         }
     }
@@ -65,9 +66,9 @@ public class StyledUILabel: UILabel {
         }
     }
     
-    @IBInspectable public var shadowColorName: String? {
+    @IBInspectable public var shadowColor: String? {
         didSet {
-            if let colorStr = borderColor, let color = ByvColors.named(colorStr) {
+            if let colorStr = shadowColor, let color = ByvColors.named(colorStr) {
                 layer.shadowColor = color.cgColor
             } else {
                 layer.shadowColor = UIColor.clear.cgColor
@@ -93,4 +94,3 @@ public class StyledUILabel: UILabel {
         }
     }
 }
-

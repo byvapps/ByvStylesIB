@@ -24,21 +24,53 @@ import UIKit
 import ByvStyles
 
 @IBDesignable
-public class StyledTextView: UITextView {
+public class StyledTextField: UITextField {
     
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         ByvDesignableLoader.preLoad()
-        if let styledText = styledText {
-            self.styledText(styledText)
+        if let styledPlaceholder = styledPlaceholder {
+            self.styledPlaceholder(styledPlaceholder)
+            self.layoutSubviews()
         }
     }
     
-    @IBInspectable var styledText: String? {
+    @IBInspectable var styledPlaceholder: String? {
         didSet {
-            if let styledText = styledText {
-                self.styledText(styledText)
+            if let styledPlaceholder = styledPlaceholder {
+                self.styledPlaceholder(styledPlaceholder)
+                self.layoutSubviews()
             }
+        }
+    }
+    
+    @IBInspectable public var sidePadding: CGFloat = 0 {
+        didSet {
+            let padding = UIView(frame: CGRect(x: 0, y: 0, width: sidePadding, height: sidePadding))
+            
+            leftViewMode = UITextFieldViewMode.always
+            leftView = padding
+            
+            rightViewMode = UITextFieldViewMode.always
+            rightView = padding
+        }
+    }
+    
+    @IBInspectable public var leftPadding: CGFloat = 0 {
+        didSet {
+            let padding = UIView(frame: CGRect(x: 0, y: 0, width: leftPadding, height: 0))
+            
+            leftViewMode = UITextFieldViewMode.always
+            leftView = padding
+        }
+    }
+    
+    @IBInspectable public var rightPadding: CGFloat = 0 {
+        didSet {
+            let padding = UIView(frame: CGRect(x: 0, y: 0, width: rightPadding, height: 0))
+            
+            rightViewMode = UITextFieldViewMode.always
+            rightView = padding
         }
     }
     
@@ -79,5 +111,33 @@ public class StyledTextView: UITextView {
             layer.cornerRadius = cornerRadius
         }
     }
-
+    
+    @IBInspectable public var shadowColor: String? {
+        didSet {
+            if let colorStr = shadowColor, let color = ByvColors.named(colorStr) {
+                layer.shadowColor = color.cgColor
+            } else {
+                layer.shadowColor = UIColor.clear.cgColor
+            }
+        }
+    }
+    
+    @IBInspectable public var shadowRadius: CGFloat = 0 {
+        didSet {
+            layer.shadowRadius = shadowRadius
+        }
+    }
+    
+    @IBInspectable public var shadowOpacity: CGFloat = 0 {
+        didSet {
+            layer.shadowOpacity = Float(shadowOpacity)
+        }
+    }
+    
+    @IBInspectable public var shadowOffsetY: CGFloat = 0 {
+        didSet {
+            layer.shadowOffset.height = shadowOffsetY
+        }
+    }
+    
 }
